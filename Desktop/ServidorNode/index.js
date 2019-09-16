@@ -39,7 +39,7 @@ app.use(routes);
 app.use('/api', routesApi);
 
 //get all the users from database
- app.get('/empleados', function (req, res) {
+ app.get('/getEmpleados', function (req, res) {
      db.query('SELECT * FROM empleado', function (error, results, fields) {
          if (error) throw error;
          return res.json(results); 
